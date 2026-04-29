@@ -1,0 +1,90 @@
+@use '../abstracts' as *;
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  line-height: 1.4;
+
+  &--accent {
+    color: var(--accent);
+    background: var(--accent-soft-strong);
+    border: 0.5px solid var(--accent-strong);
+  }
+
+  &--warn {
+    color: var(--warn);
+    background: var(--warn-soft);
+    border: 0.5px solid var(--warn-soft-border);
+  }
+
+  &--neutral {
+    color: var(--text-2);
+    background: var(--border-1);
+    border: 0.5px solid transparent;
+  }
+
+  &--info {
+    color: var(--info);
+    background: var(--info-soft);
+    border: 0.5px solid rgba(175, 169, 236, 0.3);
+  }
+}
+
+.chip-list {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-2) transparent;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--border-2);
+    border-radius: var(--radius-pill);
+  }
+
+  @include bp(md) {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+
+.chip-filter {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  background: transparent;
+  border: 0.5px solid var(--border-2);
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    border-color: var(--border-3);
+    color: var(--text-1);
+  }
+
+  &[aria-pressed="true"] {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}

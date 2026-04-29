@@ -1,0 +1,88 @@
+@use '../abstracts' as *;
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+
+  &--reading {
+    max-width: var(--container-reading);
+  }
+
+  @include bp(sm) {
+    padding-left: var(--space-5);
+    padding-right: var(--space-5);
+  }
+
+  @include bp(md) {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  @include bp(xl) {
+    max-width: var(--container-max-lg);
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+
+  @include bp(xxl) {
+    max-width: var(--container-max-xl);
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+}
+
+.section {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+
+  @include bp(md) {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  &__head {
+    margin-bottom: var(--space-6);
+  }
+
+  &__title {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-2);
+  }
+
+  &__sub {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--text-4);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-3);
+
+  @include bp(md) {
+    gap: var(--space-4);
+  }
+
+  &--2 {
+    grid-template-columns: 1fr;
+
+    @include bp(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--3 {
+    grid-template-columns: 1fr;
+
+    @include bp(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

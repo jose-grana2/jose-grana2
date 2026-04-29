@@ -1,0 +1,36 @@
+:root {
+  // Spacing — sistema base 4px
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  // Radios
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 20px;
+  --radius-full: 50%;
+
+  // Sombras
+  --shadow-focus: 0 0 0 3px rgba(93, 202, 165, 0.15);
+  --shadow-focus-strong: 0 0 0 3px rgba(93, 202, 165, 0.3), 0 0 0 1px var(--accent);
+  --shadow-hover: 0 8px 24px -8px rgba(93, 202, 165, 0.2);
+
+  // Transiciones
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease-out;
+
+  // Layout
+  --container-max-lg: 1200px;
+  --container-max-xl: 1480px;
+  --container-reading: 680px;
+  --header-height: 60px;
+}

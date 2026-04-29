@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes somos — jose.grana2.dev</title>
+  <meta name="description" content="Sobre José Granados — desarrollador PHP/Symfony en transición al stack fullstack moderno.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir y cerrar menú de navegación">
+
+  <header class="header">
+    <a href="/index.html" class="logo" aria-label="jose.grana2.dev — inicio">
+      <span class="logo-mark" aria-hidden="true">JG</span>
+      <span class="logo-text">
+        <span class="logo-text--short">jg<span class="accent">.dev</span></span>
+        <span class="logo-text--full">jose.grana2<span class="accent">.dev</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/index.html" class="nav-link">~/home</a></li>
+        <li><a href="/quienes-somos.html" class="nav-link" aria-current="page">quienes</a></li>
+        <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+        <li><a href="/blog.html" class="nav-link">blog</a></li>
+        <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+        <li class="nav-link--secondary"><a href="/registro.html" class="nav-link">registro</a></li>
+      </ul>
+    </nav>
+    <a href="/login.html" class="btn btn--secondary nav-cta">login →</a>
+    <label for="nav-toggle" class="hamburger">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </label>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="nav-list-mobile">
+      <li><a href="/index.html" class="nav-link">~/home</a></li>
+      <li><a href="/quienes-somos.html" class="nav-link" aria-current="page">quienes</a></li>
+      <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+      <li><a href="/blog.html" class="nav-link">blog</a></li>
+      <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+      <li><a href="/registro.html" class="nav-link">registro</a></li>
+      <li><a href="/login.html" class="nav-link">login</a></li>
+    </ul>
+  </div>
+
+  <main id="main" class="container section">
+    <header class="section__head">
+      <p class="section__sub">// /quienes-somos</p>
+      <h1>José Granados Rodríguez</h1>
+      <p class="about__lead mt-3">Programador en ABC de Sevilla — Máster Fullstack en Conquer Blocks.</p>
+    </header>
+
+    <section class="about" aria-labelledby="bio-title">
+      <aside aria-label="Datos personales">
+        <figure class="about__avatar">
+          <img src="/assets/foto_carnet.jpg" alt="Foto de José Granados">
+        </figure>
+        <dl class="about__meta">
+          <div class="about__meta-row"><dt class="key">role</dt><dd class="val">fullstack-dev</dd></div>
+          <div class="about__meta-row"><dt class="key">stack</dt><dd class="val">php · symfony</dd></div>
+          <div class="about__meta-row"><dt class="key">location</dt><dd class="val">sevilla, es</dd></div>
+          <div class="about__meta-row"><dt class="key">years</dt><dd class="val">8+</dd></div>
+        </dl>
+      </aside>
+
+      <div>
+        <h2 id="bio-title" class="visually-hidden">Bio</h2>
+        <blockquote class="about__bio">
+          Hola, soy José Granados — apasionado de la informática, en aprendizaje constante. Mi experiencia se ha centrado en desarrollo web con PHP, desde codificación pura hasta WordPress y, hoy, Symfony en ABC de Sevilla. Por inquietud técnica estoy dando el salto a un stack moderno: JavaScript, React y Node.
+        </blockquote>
+
+        <section class="timeline" aria-label="Trayectoria profesional">
+          <h2 class="visually-hidden">Trayectoria</h2>
+
+          <article class="timeline__item">
+            <p class="timeline__date">2026 ·</p>
+            <div>
+              <h3 class="timeline__title">Máster Fullstack</h3>
+              <p class="timeline__org">Conquer Blocks</p>
+              <p class="timeline__desc">Bases de informática, Linux, Python, SOLID, Git, HTML, CSS y JavaScript. La hoja de ruta para consolidar el salto al stack moderno.</p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <p class="timeline__date">presente ·</p>
+            <div>
+              <h3 class="timeline__title">Programador Symfony</h3>
+              <p class="timeline__org">ABC de Sevilla</p>
+              <p class="timeline__desc">Desarrollo y mantenimiento de aplicaciones web en PHP/Symfony para el grupo editorial.</p>
+            </div>
+          </article>
+
+          <article class="timeline__item">
+            <p class="timeline__date">trayec. ·</p>
+            <div>
+              <h3 class="timeline__title">PHP / WordPress</h3>
+              <p class="timeline__org">Múltiples proyectos</p>
+              <p class="timeline__desc">Desde codificación pura hasta CMS — la base sobre la que se construyen ocho años de experiencia web.</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 jose.grana2.dev</p>
+      <p><a href="/aviso-legal.html">aviso-legal.md</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

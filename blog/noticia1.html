@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es un algoritmo? — jose.grana2.dev</title>
+  <meta name="description" content="Explicación clara de qué es un algoritmo, ejemplos de la vida diaria y su rol en la programación.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+ <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir y cerrar menú de navegación">                                                                                                           
+  
+ <header class="header"> 
+    <a href="/index.html" class="logo" aria-label="jose.grana2.dev — inicio">
+      <span class="logo-mark" aria-hidden="true">JG</span>
+      <span class="logo-text">
+        <span class="logo-text--short">jg<span class="accent">.dev</span></span>
+        <span class="logo-text--full">jose.grana2<span class="accent">.dev</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/index.html" class="nav-link">~/home</a></li>
+        <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+        <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+        <li><a href="/blog.html" class="nav-link" aria-current="page">blog</a></li>
+        <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+        <li class="nav-link--secondary"><a href="/registro.html" class="nav-link">registro</a></li>
+      </ul>
+    </nav>
+    <a href="/login.html" class="btn btn--secondary nav-cta">login →</a>
+    <label for="nav-toggle" class="hamburger">                                                                
+      <span aria-hidden="true"></span>                                                                        
+      <span aria-hidden="true"></span>                                                                        
+      <span aria-hidden="true"></span>                                                                        
+    </label> 
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="nav-list-mobile">
+      <li><a href="/index.html" class="nav-link">~/home</a></li>
+      <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+      <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+      <li><a href="/blog.html" class="nav-link" aria-current="page">blog</a></li>
+      <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+      <li><a href="/registro.html" class="nav-link">registro</a></li>
+      <li><a href="/login.html" class="nav-link">login</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+    <article class="post">
+      <p class="post__breadcrumb"><a href="/blog.html">←&nbsp;/blog</a></p>
+      <p class="post__meta">
+        <span class="chip chip--accent">algoritmos</span>
+        <span>27 abr 2026</span>
+        <span>4 min lectura</span>
+      </p>
+      <h1 class="post__title">¿Qué es un algoritmo y por qué es tan importante?</h1>
+
+      <figure>
+        <img class="post__hero" src="/assets/algoritmos.jpg" alt="Imagen ilustrativa de algoritmos">
+      </figure>
+
+      <div class="post__body">
+        <p>¿Alguna vez te has preguntado cómo Google encuentra respuestas en milisegundos o cómo Netflix te recomienda la serie perfecta? Todo esto ocurre gracias a algo llamado <strong>algoritmos</strong>. Pero, ¿qué son realmente? ¿Cómo funcionan? Y, lo más importante, ¿por qué son tan esenciales?</p>
+
+        <h2>¿Qué es un algoritmo?</h2>
+        <p>Un <strong>algoritmo</strong> es un conjunto de instrucciones ordenadas y definidas para resolver un problema o realizar una tarea. Es como una receta de cocina: tienes ingredientes (entrada), sigues una serie de pasos (proceso) y obtienes un resultado (salida).</p>
+        <p>Por ejemplo, si quieres hacer un sándwich, podrías seguir estos pasos:</p>
+        <ol>
+          <li>Tomar dos rebanadas de pan.</li>
+          <li>Untar mantequilla en una de ellas.</li>
+          <li>Colocar jamón y queso encima.</li>
+          <li>Tapar con la otra rebanada de pan.</li>
+        </ol>
+        <p>Eso es un algoritmo: una serie de pasos estructurados para obtener un resultado concreto.</p>
+
+        <h2>Algoritmos en la vida diaria</h2>
+        <p>Aunque no nos demos cuenta, utilizamos algoritmos todo el tiempo:</p>
+        <ul>
+          <li><strong>Google:</strong> ordena millones de resultados para mostrarte los más relevantes.</li>
+          <li><strong>Netflix:</strong> analiza tu historial y sugiere series o películas que podrían gustarte.</li>
+          <li><strong>GPS:</strong> elige la mejor ruta en función del tráfico y la distancia.</li>
+        </ul>
+
+        <h2>Algoritmos en la programación</h2>
+        <p>En el desarrollo de software los algoritmos son la base de cualquier programa. Un ejemplo en Python para determinar si un número es par o impar:</p>
+<pre><code>numero = int(input("Introduce un número: "))
+if numero % 2 == 0:
+    print("El número es par")
+else:
+    print("El número es impar")</code></pre>
+        <p>Este pequeño fragmento toma una entrada, ejecuta un proceso y proporciona una salida.</p>
+
+        <h2>Tipos de algoritmos</h2>
+        <ul>
+          <li><strong>Búsqueda:</strong> encuentran elementos dentro de una lista.</li>
+          <li><strong>Ordenamiento:</strong> organizan datos de manera eficiente.</li>
+          <li><strong>Cifrado:</strong> protegen información (WhatsApp, banca online…).</li>
+        </ul>
+
+        <h2>¿Por qué importan?</h2>
+        <blockquote>Comprender los algoritmos no solo es clave para programar — desarrolla pensamiento lógico, mejora la resolución de problemas y permite entender la tecnología que nos rodea.</blockquote>
+
+        <h2>Conclusión</h2>
+        <p>En resumen, un algoritmo es un conjunto de pasos lógicos para resolver un problema o realizar una tarea. Están en todas partes: aprenderlos es clave para convertirse en un buen desarrollador.</p>
+      </div>
+
+      <nav class="post__nav" aria-label="Navegación entre artículos">
+        <a href="/blog.html">← volver al blog</a>
+        <a href="/blog/noticia2.html">siguiente: diagramas de flujo →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 jose.grana2.dev</p>
+      <p><a href="/aviso-legal.html">aviso-legal.md</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

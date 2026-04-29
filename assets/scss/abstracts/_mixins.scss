@@ -1,0 +1,24 @@
+// Comentario tipo `// texto` con `//` en color accent — utilidad de UI
+@mixin tag-comment-prefix {
+  &::before {
+    content: "// ";
+    color: var(--accent);
+  }
+}
+
+// Reset visual de un button nativo (mantiene accesibilidad)
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+// Glassmorphism sutil sobre el fondo principal
+@mixin glass($alpha: 0.85) {
+  background: rgba(13, 17, 23, $alpha);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}

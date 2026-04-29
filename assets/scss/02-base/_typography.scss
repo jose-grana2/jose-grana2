@@ -1,0 +1,75 @@
+@use '../abstracts' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-tight);
+}
+
+h1 {
+  font-size: var(--fs-xl);
+  letter-spacing: -0.01em;
+
+  @include bp(md) {
+    font-size: var(--fs-2xl);
+  }
+
+  @include bp(xl) {
+    font-size: var(--fs-3xl);
+  }
+}
+
+h2 {
+  font-size: var(--fs-lg);
+}
+
+h3 {
+  font-size: var(--fs-md);
+}
+
+h4, h5, h6 {
+  font-size: var(--fs-base);
+}
+
+p {
+  color: var(--text-2);
+  line-height: var(--lh-relaxed);
+
+  + p {
+    margin-top: var(--space-4);
+  }
+}
+
+small {
+  font-size: var(--fs-xs);
+  color: var(--text-4);
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+}
+
+code {
+  background: var(--bg-surface);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+}
+
+blockquote {
+  border-left: 2px solid var(--accent);
+  padding: var(--space-2) var(--space-4);
+  color: var(--text-3);
+  font-style: normal;
+}
+
+cite {
+  font-style: normal;
+  display: block;
+  color: var(--text-2);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursos — jose.grana2.dev</title>
+  <meta name="description" content="Listado de cursos del Máster Fullstack en Conquer Blocks.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir y cerrar menú de navegación">
+
+  <header class="header">
+    <a href="/index.html" class="logo" aria-label="jose.grana2.dev — inicio">
+      <span class="logo-mark" aria-hidden="true">JG</span>
+      <span class="logo-text">
+        <span class="logo-text--short">jg<span class="accent">.dev</span></span>
+        <span class="logo-text--full">jose.grana2<span class="accent">.dev</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/index.html" class="nav-link">~/home</a></li>
+        <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+        <li><a href="/cursos.html" class="nav-link" aria-current="page">cursos</a></li>
+        <li><a href="/blog.html" class="nav-link">blog</a></li>
+        <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+        <li class="nav-link--secondary"><a href="/registro.html" class="nav-link">registro</a></li>
+      </ul>
+    </nav>
+    <a href="/login.html" class="btn btn--secondary nav-cta">login →</a>
+    <label for="nav-toggle" class="hamburger">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </label>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="nav-list-mobile">
+      <li><a href="/index.html" class="nav-link">~/home</a></li>
+      <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+      <li><a href="/cursos.html" class="nav-link" aria-current="page">cursos</a></li>
+      <li><a href="/blog.html" class="nav-link">blog</a></li>
+      <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+      <li><a href="/registro.html" class="nav-link">registro</a></li>
+      <li><a href="/login.html" class="nav-link">login</a></li>
+    </ul>
+  </div>
+
+  <main id="main" class="container section">
+    <header class="section__head">
+      <p class="section__sub">// /cursos</p>
+      <h1>Listado de cursos</h1>
+      <p class="about__lead mt-3">Mi ruta de aprendizaje en el Máster Fullstack de Conquer Blocks.</p>
+    </header>
+
+    <div class="cursos__filters" data-filter-group>
+      <div class="chip-list" role="tablist" aria-label="Filtrar cursos por categoría">
+        <button class="chip-filter" type="button" aria-pressed="true">todos</button>
+        <button class="chip-filter" type="button" aria-pressed="false">fundamentos</button>
+        <button class="chip-filter" type="button" aria-pressed="false">backend</button>
+        <button class="chip-filter" type="button" aria-pressed="false">tooling</button>
+        <button class="chip-filter" type="button" aria-pressed="false">arquitectura</button>
+      </div>
+    </div>
+
+    <section class="cursos__grid" aria-label="Listado de cursos">
+      <article class="card curso-card">
+        <div class="card__head">
+          <span class="card__order">№ 01</span>
+          <span class="chip chip--accent">completado</span>
+        </div>
+        <h2 class="card__title">Bases de la informática</h2>
+        <p class="card__body">Estructura general de un ordenador, algoritmos y los cimientos del pensamiento computacional.</p>
+        <div class="card__footer">
+          <a href="https://app.conquerblocks.com/courses/master-en-desarrollo-fullstack/lessons/tema-1-estructura-general-de-un-ordenador-y-algoritmos/" target="_blank" rel="noopener">view lesson <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card curso-card">
+        <div class="card__head">
+          <span class="card__order">№ 02</span>
+          <span class="chip chip--accent">completado</span>
+        </div>
+        <h2 class="card__title">Pseudocódigo</h2>
+        <p class="card__body">Diseño y razonamiento de algoritmos antes de escribir código real.</p>
+        <div class="card__footer">
+          <a href="https://app.conquerblocks.com/courses/master-en-desarrollo-fullstack/lessons/tema-1-clases-teorico-practicas/" target="_blank" rel="noopener">view lesson <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card curso-card">
+        <div class="card__head">
+          <span class="card__order">№ 03</span>
+          <span class="chip chip--accent">completado</span>
+        </div>
+        <h2 class="card__title">Linux y la terminal</h2>
+        <p class="card__body">Filesystem, permisos, procesos y comandos esenciales para sentirse en casa en una shell.</p>
+        <div class="card__footer">
+          <a href="https://app.conquerblocks.com/courses/master-en-desarrollo-fullstack/lessons/tema-1-introduccion-linux-y-la-terminal/" target="_blank" rel="noopener">view lesson <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card curso-card">
+        <div class="card__head">
+          <span class="card__order">№ 04</span>
+          <span class="chip chip--warn">en curso</span>
+        </div>
+        <h2 class="card__title">Python</h2>
+        <p class="card__body">Sintaxis, estructuras de datos y orientación a objetos para construir bases sólidas.</p>
+        <div class="card__footer">
+          <a href="https://app.conquerblocks.com/courses/master-en-desarrollo-fullstack/lessons/tema-0-instalacion-ide-y-puesta-a-punto/" target="_blank" rel="noopener">view lesson <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card curso-card">
+        <div class="card__head">
+          <span class="card__order">№ 05</span>
+          <span class="chip chip--neutral">pendiente</span>
+        </div>
+        <h2 class="card__title">Principios SOLID</h2>
+        <p class="card__body">Buenas prácticas de diseño orientado a objetos aplicadas al ecosistema Python.</p>
+        <div class="card__footer">
+          <a href="https://app.conquerblocks.com/courses/master-en-desarrollo-fullstack/lessons/tema-1-principios-solid-en-python/" target="_blank" rel="noopener">view lesson <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <article class="card curso-card">
+        <div class="card__head">
+          <span class="card__order">№ 06</span>
+          <span class="chip chip--accent">completado</span>
+        </div>
+        <h2 class="card__title">Git y GitHub</h2>
+        <p class="card__body">Control de versiones, ramas, pull requests y flujo de trabajo colaborativo.</p>
+        <div class="card__footer">
+          <a href="https://app.conquerblocks.com/courses/master-en-desarrollo-fullstack/lessons/tema-1-la-importancia-de-git/" target="_blank" rel="noopener">view lesson <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 jose.grana2.dev</p>
+      <p><a href="/aviso-legal.html">aviso-legal.md</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+// Tipografía
+.text-mono   { font-family: var(--font-mono); }
+.text-muted  { color: var(--text-3); }
+.text-dim    { color: var(--text-4); }
+.text-accent { color: var(--accent); }
+.text-warn   { color: var(--warn); }
+.text-danger { color: var(--danger); }
+.text-info   { color: var(--info); }
+
+.text-xs { font-size: var(--fs-xs); }
+.text-sm { font-size: var(--fs-sm); }
+.text-md { font-size: var(--fs-md); }
+.text-lg { font-size: var(--fs-lg); }
+
+.fw-medium { font-weight: var(--fw-medium); }
+
+// Spacing
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+
+// Layout helpers
+.flex          { display: flex; }
+.flex-col      { flex-direction: column; }
+.items-center  { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: var(--space-2); }
+.gap-3 { gap: var(--space-3); }
+.gap-4 { gap: var(--space-4); }
+
+// Comentario inline (// texto en accent)
+.tag-comment {
+  font-family: var(--font-mono);
+  color: var(--text-4);
+  font-size: var(--fs-sm);
+  @include tag-comment-prefix;
+}

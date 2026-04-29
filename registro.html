@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro — jose.grana2.dev</title>
+  <meta name="description" content="Formulario de registro para nuevos usuarios.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir y cerrar menú de navegación">                                                                                                           
+  
+ <header class="header"> 
+    <a href="/index.html" class="logo" aria-label="jose.grana2.dev — inicio">
+      <span class="logo-mark" aria-hidden="true">JG</span>
+      <span class="logo-text">
+        <span class="logo-text--short">jg<span class="accent">.dev</span></span>
+        <span class="logo-text--full">jose.grana2<span class="accent">.dev</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/index.html" class="nav-link">~/home</a></li>
+        <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+        <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+        <li><a href="/blog.html" class="nav-link">blog</a></li>
+        <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+        <li class="nav-link--secondary"><a href="/registro.html" class="nav-link" aria-current="page">registro</a></li>
+      </ul>
+    </nav>
+    <a href="/login.html" class="btn btn--secondary nav-cta">login →</a>
+    <label for="nav-toggle" class="hamburger">                                                                
+      <span aria-hidden="true"></span>                                                                        
+      <span aria-hidden="true"></span>                                                                        
+      <span aria-hidden="true"></span>                                                                        
+    </label> 
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="nav-list-mobile">
+      <li><a href="/index.html" class="nav-link">~/home</a></li>
+      <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+      <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+      <li><a href="/blog.html" class="nav-link">blog</a></li>
+      <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+      <li><a href="/registro.html" class="nav-link" aria-current="page">registro</a></li>
+      <li><a href="/login.html" class="nav-link">login</a></li>
+    </ul>
+  </div>
+
+  <main id="main" class="registro">
+    <header class="registro__head">
+      <p class="registro__eyebrow">auth · sign up</p>
+      <h1 class="registro__title">Crear cuenta</h1>
+      <p class="text-muted mt-2">Rellena los datos para crear tu perfil.</p>
+    </header>
+
+    <form class="form registro__card" action="#" method="post" data-loading-form novalidate>
+      <fieldset class="registro__group">
+        <legend class="form__section-label">datos personales</legend>
+
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label class="input-label" for="full_name">nombre completo</label>
+            <input class="input" type="text" id="full_name" name="full_name" required aria-required="true" placeholder="José Granados">
+          </div>
+          <div class="field">
+            <label class="input-label" for="birthday">fecha nacimiento</label>
+            <input class="input" type="date" id="birthday" name="birthday" required aria-required="true">
+          </div>
+        </div>
+
+        <div class="form__row form__row--2">
+          <div class="field">
+            <label class="input-label" for="email">email</label>
+            <input class="input" type="email" id="email" name="email" required aria-required="true" placeholder="hola@ejemplo.com" aria-describedby="email-help">
+            <p id="email-help" class="input-helper">usaremos tu email para enviarte avisos.</p>
+          </div>
+          <div class="field">
+            <label class="input-label" for="address">dirección</label>
+            <input class="input" type="text" id="address" name="address" placeholder="Calle, nº, ciudad">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="registro__group">
+        <legend class="form__section-label">datos opcionales</legend>
+
+        <div class="field">
+          <label class="input-label" for="website">página web</label>
+          <input class="input" type="url" id="website" name="website" placeholder="https://tu-dominio.dev">
+        </div>
+
+        <div class="field">
+          <label class="input-label" for="image">foto de perfil</label>
+          <label class="dropzone" for="image">
+            <span>arrastra una imagen o haz click para subirla</span>
+          </label>
+          <input class="visually-hidden" type="file" id="image" name="image" accept="image/*">
+        </div>
+
+        <div class="field">
+          <label class="input-label" for="biography">biografía</label>
+          <textarea class="textarea" id="biography" name="biography" rows="4" maxlength="280" placeholder="Cuéntanos algo sobre ti..."></textarea>
+          <p class="form__counter" data-counter-for="biography" data-max="280">0 / 280</p>
+        </div>
+      </fieldset>
+
+      <div class="form__actions">
+        <a href="/index.html" class="btn btn--secondary">cancelar</a>
+        <button type="submit" class="btn btn--primary">crear cuenta →</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 jose.grana2.dev</p>
+      <p><a href="/aviso-legal.html">aviso-legal.md</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
