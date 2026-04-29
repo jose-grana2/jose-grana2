@@ -1,0 +1,38 @@
+// Entry point — orden ITCSS estricto
+// Compila a /assets/css/main.css
+
+// 01 — tokens (CSS custom properties en :root)
+@use '01-tokens/colors'     as t-colors;
+@use '01-tokens/typography' as t-type;
+@use '01-tokens/spacing'    as t-space;
+
+// 02 — base
+@use '02-base/reset'         as b-reset;
+@use '02-base/typography'    as b-type;
+@use '02-base/accessibility' as b-a11y;
+@use '02-base/layout'        as b-layout;
+
+// 03 — components
+@use '03-components/button'  as c-btn;
+@use '03-components/input'   as c-input;
+@use '03-components/card'    as c-card;
+@use '03-components/chip'    as c-chip;
+@use '03-components/header'  as c-header;
+@use '03-components/footer'  as c-footer;
+@use '03-components/form'    as c-form;
+@use '03-components/hero'    as c-hero;
+@use '03-components/toast'   as c-toast;
+
+// 04 — pages
+@use '04-pages/home'     as p-home;
+@use '04-pages/quienes'  as p-quienes;
+@use '04-pages/cursos'   as p-cursos;
+@use '04-pages/blog'     as p-blog;
+@use '04-pages/post'     as p-post;
+@use '04-pages/login'    as p-login;
+@use '04-pages/registro' as p-registro;
+@use '04-pages/contacto' as p-contacto;
+@use '04-pages/legal'    as p-legal;
+
+// 05 — utils
+@use '05-utils/utilities' as u-utils;

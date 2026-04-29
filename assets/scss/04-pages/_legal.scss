@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.legal {
+  max-width: var(--container-reading);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-4);
+
+  @include bp(md) {
+    padding: var(--space-12) 22px;
+  }
+
+  &__title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-6);
+  }
+
+  h2 {
+    font-size: var(--fs-md);
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-2);
+    color: var(--text-1);
+  }
+
+  p {
+    margin-bottom: var(--space-4);
+    color: var(--text-2);
+    line-height: var(--lh-relaxed);
+  }
+}

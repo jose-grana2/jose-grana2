@@ -1,0 +1,35 @@
+// Breakpoints (mobile-first)
+$bp-sm: 481px;   // tablet portrait
+$bp-md: 768px;   // tablet portrait amplio
+$bp-lg: 1024px;  // tablet landscape
+$bp-xl: 1280px;  // desktop
+$bp-xxl: 1600px; // desktop XL
+
+@mixin bp($size) {
+  @if $size == sm {
+    @media (min-width: $bp-sm) { @content; }
+  } @else if $size == md {
+    @media (min-width: $bp-md) { @content; }
+  } @else if $size == lg {
+    @media (min-width: $bp-lg) { @content; }
+  } @else if $size == xl {
+    @media (min-width: $bp-xl) { @content; }
+  } @else if $size == xxl {
+    @media (min-width: $bp-xxl) { @content; }
+  } @else {
+    @error "Breakpoint '#{$size}' no reconocido. Usa: sm, md, lg, xl, xxl.";
+  }
+}
+
+// Hasta cierto breakpoint (max-width)
+@mixin bp-down($size) {
+  @if $size == sm {
+    @media (max-width: ($bp-sm - 1)) { @content; }
+  } @else if $size == md {
+    @media (max-width: ($bp-md - 1)) { @content; }
+  } @else if $size == lg {
+    @media (max-width: ($bp-lg - 1)) { @content; }
+  } @else if $size == xl {
+    @media (max-width: ($bp-xl - 1)) { @content; }
+  }
+}

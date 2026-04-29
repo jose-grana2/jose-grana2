@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Qué es un diagrama de flujo? — jose.grana2.dev</title>
+  <meta name="description" content="Qué es un diagrama de flujo, sus símbolos básicos y por qué es tan útil al programar.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido</a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Abrir y cerrar menú de navegación">                                                                                                           
+  
+ <header class="header"> 
+    <a href="/index.html" class="logo" aria-label="jose.grana2.dev — inicio">
+      <span class="logo-mark" aria-hidden="true">JG</span>
+      <span class="logo-text">
+        <span class="logo-text--short">jg<span class="accent">.dev</span></span>
+        <span class="logo-text--full">jose.grana2<span class="accent">.dev</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="/index.html" class="nav-link">~/home</a></li>
+        <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+        <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+        <li><a href="/blog.html" class="nav-link" aria-current="page">blog</a></li>
+        <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+        <li class="nav-link--secondary"><a href="/registro.html" class="nav-link">registro</a></li>
+      </ul>
+    </nav>
+    <a href="/login.html" class="btn btn--secondary nav-cta">login →</a>
+    <label for="nav-toggle" class="hamburger">                                                                
+      <span aria-hidden="true"></span>                                                                        
+      <span aria-hidden="true"></span>                                                                        
+      <span aria-hidden="true"></span>                                                                        
+    </label> 
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <ul class="nav-list-mobile">
+      <li><a href="/index.html" class="nav-link">~/home</a></li>
+      <li><a href="/quienes-somos.html" class="nav-link">quienes</a></li>
+      <li><a href="/cursos.html" class="nav-link">cursos</a></li>
+      <li><a href="/blog.html" class="nav-link" aria-current="page">blog</a></li>
+      <li><a href="/contacto.html" class="nav-link">contacto</a></li>
+      <li><a href="/registro.html" class="nav-link">registro</a></li>
+      <li><a href="/login.html" class="nav-link">login</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+    <article class="post">
+      <p class="post__breadcrumb"><a href="/blog.html">←&nbsp;/blog</a></p>
+      <p class="post__meta">
+        <span class="chip chip--info">diagramas</span>
+        <span>27 abr 2026</span>
+        <span>5 min lectura</span>
+      </p>
+      <h1 class="post__title">¿Qué es un diagrama de flujo y por qué es tan útil?</h1>
+
+      <figure>
+        <img class="post__hero" src="/assets/diagramas-flujo.jpg" alt="Imagen ilustrativa de diagramas de flujo">
+      </figure>
+
+      <div class="post__body">
+        <p>¿Alguna vez te has preguntado cómo los programadores planifican sus programas antes de escribir una sola línea de código? Una herramienta poderosa hace ese trabajo: el <strong>diagrama de flujo</strong>.</p>
+
+        <h2>¿Qué es un diagrama de flujo?</h2>
+        <p>Una representación visual de un proceso mediante símbolos y flechas que indican el flujo y el orden de ejecución. En pocas palabras, un mapa que muestra los pasos para resolver un problema o completar una tarea.</p>
+        <p>Por ejemplo, si queremos hacer un café:</p>
+        <ol>
+          <li>Inicio</li>
+          <li>Calentar agua</li>
+          <li>Añadir café en el filtro</li>
+          <li>Verter el agua caliente</li>
+          <li>Servir en una taza</li>
+          <li>Fin</li>
+        </ol>
+
+        <h2>¿Para qué sirve en programación?</h2>
+        <ul>
+          <li><strong>Organizar ideas antes de programar:</strong> visualizar la lógica antes del código.</li>
+          <li><strong>Detectar errores o pasos innecesarios:</strong> al ser visuales, ayudan a depurar antes de implementar.</li>
+          <li><strong>Facilitar la comunicación:</strong> excelente para explicar cómo funciona un programa sin escribir código.</li>
+        </ul>
+
+        <h2>Símbolos básicos</h2>
+        <ul>
+          <li><strong>Óvalo:</strong> representa el inicio y el fin.</li>
+          <li><strong>Rombo:</strong> se usa para tomar decisiones.</li>
+          <li><strong>Rectángulo:</strong> representa una acción o proceso.</li>
+          <li><strong>Flecha:</strong> indica la dirección del flujo.</li>
+        </ul>
+
+        <h2>Ejemplo práctico</h2>
+        <p>Programa que determina si un número es par o impar:</p>
+<pre><code>numero = int(input("Introduce un número: "))
+resto = numero % 2
+if resto == 0:
+    print("El número es par")
+else:
+    print("El número es impar")
+print("Fin del programa")</code></pre>
+        <p>El diagrama de flujo correspondiente nos ayuda a visualizar la lógica antes de escribir el código, reduciendo errores y facilitando la comprensión.</p>
+
+        <h2>Beneficios</h2>
+        <blockquote>Los diagramas de flujo simplifican problemas complejos, mejoran la comprensión del código, facilitan la depuración y se usan en muchas áreas más allá de la programación.</blockquote>
+
+        <h2>Conclusión</h2>
+        <p>Un <strong>diagrama de flujo</strong> es una forma visual de representar un proceso o algoritmo mediante símbolos y flechas. Una herramienta clave para organizar ideas, detectar errores y mejorar la lógica de tu código.</p>
+      </div>
+
+      <nav class="post__nav" aria-label="Navegación entre artículos">
+        <a href="/blog/noticia1.html">← anterior: algoritmos</a>
+        <a href="/blog.html">volver al blog →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© 2026 jose.grana2.dev</p>
+      <p><a href="/aviso-legal.html">aviso-legal.md</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

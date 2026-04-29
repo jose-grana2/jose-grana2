@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.home-summary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+
+  @include bp(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__head h3 {
+    font-size: var(--fs-md);
+  }
+}
+
+.home-feature {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--text-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-1);
+  border-radius: var(--radius-md);
+
+  .accent {
+    color: var(--accent);
+  }
+}

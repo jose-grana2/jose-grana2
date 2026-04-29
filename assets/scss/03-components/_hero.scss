@@ -1,0 +1,123 @@
+@use '../abstracts' as *;
+
+.hero {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+
+  @include bp(md) {
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    align-items: center;
+
+    @include bp(md) {
+      grid-template-columns: 1.3fr 1fr;
+      gap: var(--space-10);
+    }
+  }
+
+  &__eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-sm);
+    color: var(--text-4);
+    margin-bottom: var(--space-3);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    &::before {
+      content: "//";
+      color: var(--accent);
+    }
+  }
+
+  &__title {
+    font-size: var(--fs-2xl);
+    line-height: var(--lh-tight);
+    color: var(--text-1);
+    margin-bottom: var(--space-4);
+
+    @include bp(md) {
+      font-size: var(--fs-3xl);
+    }
+
+    @include bp(xl) {
+      font-size: 52px;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+  }
+
+  &__lead {
+    font-size: var(--fs-md);
+    color: var(--text-3);
+    line-height: var(--lh-relaxed);
+    margin-bottom: var(--space-6);
+    max-width: 560px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+}
+
+.code-block {
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+  overflow: hidden;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 0.5px solid var(--border-1);
+    background: var(--bg-elevated);
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    color: var(--text-4);
+  }
+
+  &__dots {
+    display: inline-flex;
+    gap: 6px;
+    margin-right: var(--space-2);
+
+    span {
+      width: 10px;
+      height: 10px;
+      border-radius: var(--radius-full);
+      background: var(--border-2);
+    }
+  }
+
+  &__body {
+    padding: var(--space-4);
+    overflow-x: auto;
+  }
+
+  pre {
+    margin: 0;
+    white-space: pre;
+  }
+}
+
+// Tokens de sintaxis para code blocks
+.tok-comment { color: var(--text-4); }
+.tok-key     { color: var(--accent); }
+.tok-string  { color: var(--warn); }
+.tok-num     { color: var(--info); }
+.tok-punct   { color: var(--text-3); }

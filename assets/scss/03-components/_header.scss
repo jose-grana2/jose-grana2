@@ -1,0 +1,285 @@
+@use '../abstracts' as *;
+
+// ────────────────────────────────────────────────────────────────────────
+// Mobile nav 100% CSS — patrón checkbox + label.
+// El <input type="checkbox" id="nav-toggle"> vive ANTES del <header> y del
+// <div class="mobile-menu">, así los selectores `~` alcanzan a ambos.
+// El <label for="nav-toggle"> es la hamburguesa visible.
+// ────────────────────────────────────────────────────────────────────────
+
+.nav-toggle {
+  // Visualmente oculto pero focusable con teclado
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 0.5px solid var(--border-1);
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background var(--transition-fast), padding var(--transition-fast);
+  min-height: var(--header-height);
+
+  @include bp(md) {
+    padding: 14px var(--space-6);
+  }
+
+  @include bp(xl) {
+    padding: 14px var(--space-8);
+  }
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--text-1);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+
+  &:hover {
+    color: var(--text-1);
+  }
+}
+
+.logo-mark {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  display: inline-grid;
+  place-content: center;
+  color: var(--accent-bg);
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  .accent {
+    color: var(--accent);
+  }
+
+  &--short {
+    display: inline;
+  }
+
+  &--full {
+    display: none;
+  }
+
+  @include bp(sm) {
+    &--short { display: none; }
+    &--full  { display: inline; }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: none;
+  gap: var(--space-6);
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+
+  @include bp(md) {
+    display: flex;
+
+    .nav-link--secondary {
+      display: none;
+    }
+  }
+
+  @include bp(lg) {
+    display: flex;
+
+    .nav-link--secondary {
+      display: inline-block;
+    }
+  }
+}
+
+.nav-link {
+  position: relative;
+  padding: 6px 0;
+  color: var(--text-3);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--text-1);
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &[aria-current="page"] {
+    color: var(--accent);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1.5px;
+      background: var(--accent);
+    }
+  }
+
+  &:focus-visible {
+    outline: 1.5px solid var(--accent);
+    outline-offset: 2px;
+    background: var(--accent-soft);
+    border-radius: 3px;
+    padding: 6px var(--space-2);
+  }
+}
+
+.nav-cta {
+  display: none;
+  margin-left: var(--space-4);
+
+  @include bp(lg) {
+    display: inline-flex;
+  }
+}
+
+// ─── Hamburguesa (label asociado al checkbox) ───────────────────────────
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  background: transparent;
+  border: 0.5px solid var(--border-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    border-color: var(--border-3);
+  }
+
+  span {
+    display: block;
+    height: 1.5px;
+    width: 100%;
+    background: var(--text-2);
+    transition: all var(--transition-base), background var(--transition-fast);
+    transform-origin: center;
+  }
+
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+// Cuando el checkbox oculto recibe foco, mostramos el ring sobre la hamburguesa
+.nav-toggle:focus-visible ~ .header .hamburger {
+  outline: 1.5px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+// Cuando el checkbox está marcado: hamburguesa → X
+.nav-toggle:checked ~ .header .hamburger {
+  border-color: var(--accent);
+
+  span {
+    background: var(--accent);
+  }
+
+  span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+  }
+
+  span:nth-child(2) {
+    opacity: 0;
+  }
+
+  span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+  }
+}
+
+// ─── Menú móvil ─────────────────────────────────────────────────────────
+.mobile-menu {
+  position: fixed;
+  inset: var(--header-height) 0 0 0;
+  background: var(--bg-primary);
+  border-top: 0.5px solid var(--border-1);
+  padding: var(--space-6) var(--space-4);
+  z-index: 99;
+  transform: translateX(100%);
+  transition: transform var(--transition-base);
+  overflow-y: auto;
+
+  .nav-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--fs-md);
+  }
+
+  .nav-link {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    color: var(--text-2);
+
+    &:hover {
+      background: var(--bg-surface);
+    }
+
+    &[aria-current="page"] {
+      background: var(--accent-soft);
+      color: var(--accent);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @include bp(lg) {
+    display: none;
+  }
+}
+
+// Apertura del menú móvil cuando el checkbox está marcado
+.nav-toggle:checked ~ .mobile-menu {
+  transform: translateX(0);
+}
+
+// Bloqueo del scroll de fondo cuando el menú está abierto (navegadores con :has)
+body:has(.nav-toggle:checked) {
+  overflow: hidden;
+}
